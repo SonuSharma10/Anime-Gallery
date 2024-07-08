@@ -17,13 +17,15 @@
         id="thaught"
         rows="5"
         cols="40"
-        placeholder="Your Thaughts"
+        placeholder="#captions"
         style="vertical-align: top"
       ></textarea>
       <br />
       <br />
       <label for="image">Related Image/s (If Available):</label>
-      <input type="file" name="image" id="image" multiple accept="image/*" />
+      <input type="url" name="image" id="image" />
+      <a id="addButton">Add Image Input</a>
+      <div class="add_img"></div>
       <br />
       <br />
       <button type="submit">SUBMIT</button>

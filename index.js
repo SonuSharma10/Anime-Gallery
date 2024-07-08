@@ -9,9 +9,8 @@ posts = [
     username: 'Sonu Sharma',
     thaught: 'Life is Great ❤️',
     image: [
-      '',
       'https://i.pinimg.com/originals/43/af/d0/43afd01dc42127c352f1fde070cc2be0.jpg',
-      'https://img.freepik.com/free-photo/anime-style-character-space_23-2151133952.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1720310400&semt=ais_user',
+      'https://wallpapers.com/images/high/thorough-mage-ba2zud4g6b7z9hs9.webp',
       'https://wallpapers.com/images/high/blue-boy-6klqmipm5nq8f6pu.webp',
     ],
   },
@@ -48,10 +47,15 @@ app.get('/posts/new', (req, res) => {
 
 app.post('/posts', (req, res) => {
   console.log(req.body);
-
-  //   let { username, thaught } = req.body;
+  let img = [];
+  let { username, thaught, image } = req.body;
   //NOTE { username,thaught} === {username:username, thaught:thaught}
-  posts.push(req.body);
+  if (image.constructor != Array) {
+    img.push(image);
+  } else {
+    img = image;
+  }
+  posts.push({ username, thaught, image: img });
   res.redirect('/posts');
 });
 

@@ -12,12 +12,12 @@
     <div class="thaughts">
       <h3>@<%=post.username%></h3>
       <h4>❝<%=post.thaught%>❞</h4>
-      <% for( let index = 0; index < 2;index ++) { %> <% if (post.image[index]!="") { %><img
-        src="<%=post.image[index]%>"
-        alt="anime image"
-      />
-      <% } %> <% } %>
+      <% for( let index = 0; index < 2;index ++) { %> <% if (post.image[index]=="") { %> <% index --
+      %> <% } %>
+      <img src="<%=post.image[index]%>" alt="" />
+      <% } %>
     </div>
+
     <% } %>
     <a href="http://localhost:8080/posts/new">Create Your own GALLERY</a>
   </body>
