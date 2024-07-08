@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Gallery</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <form action="/posts" method="post">
+      <label for="username">Username :@</label>
+      <input type="text" name="username" placeholder="Username" id="username" /><br /><br />
+
+      <label for="thaughts">Caption for Your Gallery :</label>
+      <textarea
+        name="thaught"
+        id="thaught"
+        rows="5"
+        cols="40"
+        placeholder="Your Thaughts"
+        style="vertical-align: top"
+      ></textarea>
+      <br />
+      <br />
+      <label for="image">Related Image/s (If Available):</label>
+      <input type="file" name="image" id="image" multiple accept="image/*" />
+      <br />
+      <br />
+      <button type="submit">SUBMIT</button>
+    </form>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
