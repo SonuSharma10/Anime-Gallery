@@ -2,15 +2,19 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h2 {
+.galleryTitle {
   color: blueviolet;
   margin-bottom: 30px;
   text-align: center;
 }
 
-.thaughts {
+.gallery {
   background-color: antiquewhite;
   margin-bottom: 30px;
+}
+
+.username {
+  font-style: italic;
 }
 
 button {

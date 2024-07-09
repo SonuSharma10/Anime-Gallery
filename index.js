@@ -65,11 +65,17 @@ app.post('/posts', (req, res) => {
     img = image;
   }
   posts.push({ id, username, thaught, image: img });
-  console.log(posts);
+  // console.log(posts);
   res.redirect('/posts');
 });
 
-//see post based on id in detail option=>Click here to see All xyz posts
+//see post based on id in detail option=>Click here to see All "X" posts
+app.get('/posts/:id', (req, res) => {
+  Uid = req.params.id;
+  const selectedPost = posts.find((post) => post.id === Uid);
+  res.render('detail_post.ejs', { post: selectedPost });
+});
+
 app.listen(path, () => {
   console.log('listning on port', path);
 });

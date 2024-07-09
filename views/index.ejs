@@ -7,17 +7,19 @@
     <title>Anime Gallery</title>
   </head>
   <body>
-    <h2>ANIME GALLERY</h2>
+    <h2 class="galleryTitle">ANIME GALLERY</h2>
     <% for(post of posts) { %>
-    <div class="thaughts">
-      <h3>@<%=post.username%></h3>
-      <h4>❝<%=post.thaught%>❞</h4>
+    <div class="gallery">
+      <h3 class="username">@<%=post.username%></h3>
+      <h4 class="caption">❝<%=post.thaught%>❞</h4>
       <% for( let index = 0; index < 2;index ++) { %> <% if (post.image[index]=="") { %> <% index --
       %> <% } %>
       <img src="<%=post.image[index]%>" alt="" />
       <% } %>
       <div class="info">
-        <a href="#">Click here to see All <%=post.image.length%> posts</a>
+        <a href="http://localhost:8080/posts/<%=post.id%>"
+          >Click here to see All <%=post.image.length%> posts</a
+        >
       </div>
     </div>
 
