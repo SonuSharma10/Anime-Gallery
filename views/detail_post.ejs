@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>@<%=post.username%>`s POST</title>
-<link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <div class="gallery">
-    <h3 class="username">@<%=post.username%></h3>
-    <h4 class="caption">❝<%=post.thaught%>❞</h4>
-    <% for( let index = 0; index < post.image.length; index ++) { %> <% if (post.image[index]=="") { %> <% index --
-    %> <% } %>
-    <img src="<%=post.image[index]%>" alt="" />
-    <% } %>
-</body>
+      <h3 class="username">@<%=post.username%></h3>
+      <h4 class="caption">❝<%=post.thaught%>❞</h4>
+      <% for( let index = 0; index < post.image.length; index ++) { %> <% if (post.image[index]=="")
+      { %> <% index -- %> <% } %>
+      <img src="<%=post.image[index]%>" alt="" />
+      <% } %>
+    </div>
+    <br />
+    <br />
+    <a href="http://localhost:8080/posts">HOME</a>
+  </body>
 </html>

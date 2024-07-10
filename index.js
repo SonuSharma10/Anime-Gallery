@@ -7,6 +7,8 @@ const methodOverride = require('method-override');
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 app.use(express.urlencoded({ extended: true }));
+//using CSS and JS on Public Folder
+app.use(express.static(__dirname + '/public'));
 
 // override with POST having ?_method=DELETE
 app.use(methodOverride('_method'));
@@ -45,9 +47,11 @@ posts = [
   },
 ];
 
+app.get('/', (req, res) => {
+  res.redirect('/posts');
+});
 //fetching index.js on /posts
 app.get('/posts', (req, res) => {
-  app.use(express.static(__dirname + '/public'));
   res.render('index.ejs', { posts });
 });
 
@@ -96,7 +100,7 @@ app.patch('/posts/update/:id', (req, res) => {
   selectedPost.image = newImage;
   // console.log(posts);
   // console.log(req.body);
-  res.redirect('/posts');
+  res.redirect(`/posts/${Uid}`);
 });
 
 app.listen(path, () => {
