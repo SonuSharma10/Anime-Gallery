@@ -87,7 +87,15 @@ app.get('/posts/update/:id', (req, res) => {
   res.render('update.ejs', { post: selectedPost });
 });
 
-app.patch('/posts/update', (req, res) => {
+app.patch('/posts/update/:id', (req, res) => {
+  Uid = req.params.id;
+  let { thaught, image } = req.body;
+  const selectedPost = posts.find((post) => post.id === Uid);
+  selectedPost.thaught = thaught;
+  newImage = image.filter((img) => img !== '');
+  selectedPost.image = newImage;
+  // console.log(posts);
+  // console.log(req.body);
   res.redirect('/posts');
 });
 
