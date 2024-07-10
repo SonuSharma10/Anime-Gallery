@@ -2,9 +2,14 @@ const express = require('express');
 const app = express();
 const path = 8080;
 const { v4: uuidv4 } = require('uuid');
+// using npm module method-override to use put/patch/delete methods
+const methodOverride = require('method-override');
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 app.use(express.urlencoded({ extended: true }));
+
+// override with POST having ?_method=DELETE
+app.use(methodOverride('_method'));
 
 //declaration of sample data
 posts = [
@@ -74,6 +79,16 @@ app.get('/posts/:id', (req, res) => {
   Uid = req.params.id;
   const selectedPost = posts.find((post) => post.id === Uid);
   res.render('detail_post.ejs', { post: selectedPost });
+});
+
+app.get('/posts/update/:id', (req, res) => {
+  Uid = req.params.id;
+  const selectedPost = posts.find((post) => post.id === Uid);
+  res.render('update.ejs', { post: selectedPost });
+});
+
+app.patch('/posts/update', (req, res) => {
+  res.redirect('/posts');
 });
 
 app.listen(path, () => {
