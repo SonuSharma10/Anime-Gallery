@@ -1,4 +1,4 @@
-console.log('hello');
+// console.log('hello');
 const addButton = document.getElementById('addButton');
 const addImgDiv = document.querySelector('.add_img');
 

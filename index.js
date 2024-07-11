@@ -92,14 +92,15 @@ app.get('/posts/update/:id', (req, res) => {
 });
 
 app.patch('/posts/update/:id', (req, res) => {
+  console.log(req.body);
+
   Uid = req.params.id;
   let { thaught, image } = req.body;
   const selectedPost = posts.find((post) => post.id === Uid);
   selectedPost.thaught = thaught;
   newImage = image.filter((img) => img !== '');
   selectedPost.image = newImage;
-  // console.log(posts);
-  // console.log(req.body);
+  console.log(posts);
   res.redirect(`/posts/${Uid}`);
 });
 
