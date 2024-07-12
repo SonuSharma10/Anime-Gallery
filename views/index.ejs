@@ -8,6 +8,7 @@
   </head>
   <body>
     <h2 class="galleryTitle">ANIME GALLERY</h2>
+    <a href="http://localhost:8080/posts/new">Create Your own GALLERY</a>
     <% for(post of posts) { %>
     <div class="gallery">
       <h3 class="username">@<%=post.username%></h3>
@@ -24,9 +25,13 @@
       <div class="update">
         <a href="http://localhost:8080/posts/update/<%=post.id%>">Update Post</a>
       </div>
+      <div class="delete">
+        <form method="post" action="/posts/<%=post.id%>?_method=delete">
+          <button>Delete Post</button>
+        </form>
+      </div>
     </div>
 
     <% } %>
-    <a href="http://localhost:8080/posts/new">Create Your own GALLERY</a>
   </body>
 </html>

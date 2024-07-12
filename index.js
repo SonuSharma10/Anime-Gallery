@@ -85,23 +85,32 @@ app.get('/posts/:id', (req, res) => {
   res.render('detail_post.ejs', { post: selectedPost });
 });
 
+//this and bellow PATCH is in link andthey are used as to update the post
 app.get('/posts/update/:id', (req, res) => {
   Uid = req.params.id;
   const selectedPost = posts.find((post) => post.id === Uid);
   res.render('update.ejs', { post: selectedPost });
 });
 
+//redirecting and using the patch by "_method=PATCH"
 app.patch('/posts/update/:id', (req, res) => {
-  console.log(req.body);
-
+  // console.log(req.body);
   Uid = req.params.id;
   let { thaught, image } = req.body;
   const selectedPost = posts.find((post) => post.id === Uid);
   selectedPost.thaught = thaught;
   newImage = image.filter((img) => img !== '');
   selectedPost.image = newImage;
-  console.log(posts);
+  // console.log(posts);
   res.redirect(`/posts/${Uid}`);
+});
+
+//"_method=DELETE" used to delete button in the form of index.ejs and update.ejs
+app.delete('/posts/:id', (req, res) => {
+  Uid = req.params.id;
+  posts = posts.filter((post) => post.id !== Uid);
+  res.redirect(`/posts`);
+  // console.log(posts);
 });
 
 app.listen(path, () => {

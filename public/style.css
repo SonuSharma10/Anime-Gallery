@@ -2,6 +2,10 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#thaught {
+  vertical-align: top;
+}
+
 .galleryTitle {
   color: blueviolet;
   margin-bottom: 30px;

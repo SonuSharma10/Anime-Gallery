@@ -9,23 +9,24 @@
   <body>
     <form action="/posts" method="post">
       <label for="username">Username :@</label>
-      <input type="text" name="username" placeholder="Username" id="username" /><br /><br />
+      <input
+        type="text"
+        name="username"
+        placeholder="Username"
+        id="username"
+        size="50"
+      /><br /><br />
 
       <label for="thaughts">Caption for Your Gallery :</label>
-      <textarea
-        name="thaught"
-        id="thaught"
-        rows="5"
-        cols="40"
-        placeholder="#captions"
-        style="vertical-align: top"
-      ></textarea>
+      <textarea name="thaught" id="thaught" rows="5" cols="50" placeholder="#captions"></textarea>
       <br />
-      <br />
-      <label for="image">Anime Image/s :</label>
-      <input type="url" name="image" id="image" />
-      <a id="addButton">Add Image Input</a>
-      <div class="add_img"></div>
+      <div class="input_img">
+        <label for="image">Anime Image/s :</label>
+        <input type="url" name="image" id="image" size="90" />
+        <span class="clickToView">view Link Image</span>
+        <a id="addButton">Add Image Input</a>
+        <div class="add_img"></div>
+      </div>
       <br />
       <br />
       <button type="submit">SUBMIT</button>

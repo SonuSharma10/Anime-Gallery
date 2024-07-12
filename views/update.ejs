@@ -8,21 +8,18 @@
   </head>
   <body>
     <p>Update request for UserID : <%=post.id%></p>
+    <div class="delete">
+      <form method="post" action="/posts/<%=post.id%>?_method=delete">
+        <button type="submit">Delete Post</button>
+      </form>
+    </div>
 
-    <form action="/posts/update/<%=post.id%>?_method=PATCH" method="post">
+    <form action="/posts/update/<%=post.id%>?_method=patch" method="post">
       <div class="gallery">
         <h3 class="username">@<%=post.username%></h3>
-
         <label for="thaughts">Old Caption :</label>
-        <textarea
-          name="thaught"
-          id="thaught"
-          rows="5"
-          cols="40"
-          placeholder="#captions"
-          style="vertical-align: top"
-        >
-        <%=post.thaught%></textarea
+        <textarea name="thaught" id="thaught" rows="5" cols="40" placeholder="#captions">
+<%=post.thaught%></textarea
         >
         <br />
         <% for( let index = 0; index < post.image.length; index ++) { %> <% if
@@ -32,7 +29,8 @@
           <label for="image">Anime Image/s :</label>
           <input type="url" name="image" id="image" value="<%=post.image[index]%>" size="100" />
         </span>
-        <button type="reset" class="remove_img">Delete Image</button>
+        <button type="button" class="remove_img">Delete Image</button>
+        <div></div>
         <% } %>
         <br />
         <label for="image">Add more Image/s URL (If Available):</label>
