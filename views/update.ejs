@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Update Post</title>
+  </head>
+  <body>
+    <p>Update request for UserID : <%=post.id%></p>
+
+    <form action="/posts/update/<%=post.id%>?_method=PATCH" method="post">
+      <div class="gallery">
+        <h3 class="username">@<%=post.username%></h3>
+
+        <label for="thaughts">Old Caption :</label>
+        <textarea
+          name="thaught"
+          id="thaught"
+          rows="5"
+          cols="40"
+          placeholder="#captions"
+          style="vertical-align: top"
+        >
+        <%=post.thaught%></textarea
+        >
+        <br />
+        <% for( let index = 0; index < post.image.length; index ++) { %> <% if
+        (post.image[index]=="") { %> <% index -- %> <% } %>
+        <span class="info">
+          <img class="updated_img" src="<%=post.image[index]%>" alt="" />
+          <label for="image">Anime Image/s :</label>
+          <input type="url" name="image" id="image" value="<%=post.image[index]%>" size="100" />
+        </span>
+        <button type="reset" class="remove_img">Delete Image</button>
+        <% } %>
+        <br />
+        <label for="image">Add more Image/s URL (If Available):</label>
+        <input type="url" name="image" id="image" size="90" style="display: none" />
+        <input type="url" name="image" id="image" size="90" />
+
+        <a id="addButton">Add More Image</a>
+        <div class="add_img"></div>
+        <br />
+        <br />
+      </div>
+      <button type="submit">SUBMIT</button>
+    </form>
+    <script src="/app.js"></script>
+    <script>
+      let btns = document.querySelectorAll('.remove_img');
+      for (btn of btns) {
+        btn.addEventListener('click', function delImg(event) {
+          //console.dir(event.target);
+          //console.log(event.target);
+          //console.dir(event.target.previousElementSibling);
+          event.target.previousElementSibling.remove();
+          event.target.remove();
+        });
+      }
+    </script>
+  </body>
+</html>
