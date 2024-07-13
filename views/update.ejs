@@ -2,11 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <title>Update Post</title>
   </head>
   <body>
+    <nav>
+      <div class="logo">
+        <img src="/assets/anime.webp" alt="error" class="navImg" />
+        <span class="galleryTitle">ANIME GALLERY</span>
+      </div>
+      <div class="links">
+        <a href="http://localhost:8080/posts/new"><i class="fa-solid fa-circle-plus"></i> Create</a>
+        <a href="http://localhost:8080/posts"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#"><i class="fa-solid fa-circle-info"></i> Info</a>
+      </div>
+    </nav>
     <p>Update request for UserID : <%=post.id%></p>
     <div class="delete">
       <form method="post" action="/posts/<%=post.id%>?_method=delete">
