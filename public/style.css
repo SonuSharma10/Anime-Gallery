@@ -42,13 +42,13 @@ img {
 /* NAV */
 
 nav {
-  background-color: #2e112d;
+  background: linear-gradient(to left, #2e112df8 70%, #540032);
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
-  border-top: 3px solid #700b1e;
-  box-shadow: 0 5px 12px 2px #602542;
+  border-top: 3px solid #983795f8;
+  box-shadow: 0 5px 15px 2px #602542;
 }
 nav .logo {
   display: flex;
@@ -71,10 +71,21 @@ nav .logo {
 
 nav .links {
   display: flex;
-  gap: 10px;
-  margin-right: 12px;
+  margin-right: 40px;
 }
 
 nav a {
   text-decoration: none;
+  color: #c9283e;
+  font-size: 1.1rem;
+  padding: 8px;
+  border: 2px solid transparent;
+}
+
+nav a:hover,
+nav a:active {
+  border-right: 2px solid #f0433a;
+  border-left: 2px solid #f0433a;
+  border-radius: 20%;
+  scale: 105%;
 }
