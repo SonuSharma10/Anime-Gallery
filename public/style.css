@@ -1,15 +1,12 @@
 * {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #thaught {
   vertical-align: top;
-}
-
-.galleryTitle {
-  color: blueviolet;
-  margin-bottom: 30px;
-  text-align: center;
 }
 
 .gallery {
@@ -40,4 +37,44 @@ img {
 .updated_img {
   width: 80px;
   height: auto;
+}
+
+/* NAV */
+
+nav {
+  background-color: #2e112d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  border-top: 3px solid #700b1e;
+  box-shadow: 0 5px 12px 2px #602542;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  gap: 8px;
+}
+.navImg {
+  height: 3rem;
+  width: 3rem;
+}
+
+.galleryTitle {
+  color: #f0433a;
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 0;
+}
+
+nav .links {
+  display: flex;
+  gap: 10px;
+  margin-right: 12px;
+}
+
+nav a {
+  text-decoration: none;
 }
