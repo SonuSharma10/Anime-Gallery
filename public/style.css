@@ -224,7 +224,8 @@ nav a:active {
     height: auto;
   }
   .mainInfo {
-    justify-content: flex-start;
+    justify-content: space-between;
+
     align-items: center;
     flex-wrap: wrap;
   }
