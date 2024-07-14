@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-
+    <link rel='stylesheet' id='fontawesome-css'  href='https://use.fontawesome.com/releases/v5.0.1/css/all.css?ver=4.9.1' type='text/css' media='all' /> 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -32,33 +32,31 @@
     <% for(post of posts) { %>
     <div class="gallery">
       <div class="mainInfo">
-        <div>
+        <div class="usercaption">
           <h3 class="username"><i class="fa-solid fa-user"></i> @<%=post.username%></h3>
-          <h4 class="caption"><i class="fa-solid fa-file-pen"></i> ❝<%=post.thaught%>❞</h4>
+          <h4 class="caption"><i class="fa-solid fa-pen"></i></i> ❝<%=post.thaught%>❞</h4>
         </div>
-        <span class="update-delete">
-          <div class="update">
-            <a href="http://localhost:8080/posts/update/<%=post.id%>"
-              ><i class="fa-solid fa-pen-to-square"></i> Update</a
-            >
-          </div>
+        <div class="update-delete">
+          <a href="http://localhost:8080/posts/update/<%=post.id%>" class="update"
+            ><i class="fa-solid fa-pen-to-square"></i> Update</a
+          >
           <div class="delete">
             <form method="post" action="/posts/<%=post.id%>?_method=delete">
               <button><i class="fa-solid fa-trash-can"></i> Delete</button>
             </form>
           </div>
-        </span>
+        </div>
       </div>
+    <div class="images">
       <% for( let index = 0; index < 2;index ++) { %> <% if (post.image[index]=="") { %> <% index --
       %> <% } %>
       <img src="<%=post.image[index]%>" alt="" />
       <% } %>
-      <div class="info">
+      <button>
         <a href="http://localhost:8080/posts/<%=post.id%>"
-          >Click here to see All <%=post.image.length%> posts</a
-        >
-      </div>
+          >SEE ALL <%=post.image.length%> IMAGES</a></button>
     </div>
+  </div>
 
     <% } %>
   </body>

@@ -16,24 +16,8 @@ body {
   vertical-align: top;
 }
 
-.username {
-  font-style: italic;
-}
-
-/* button {
-  display: inline-block;
-  padding: 10px;
-  background: #ccc;
-  cursor: pointer;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-button:hover {
-  background: #ddd;
-} */
-
 img {
-  height: 300px;
+  height: 280px;
 }
 
 .updated_img {
@@ -105,6 +89,7 @@ nav a:active {
 .gallery {
   margin-bottom: 30px;
   border-bottom: 6px solid #540032;
+  margin: 25px;
 }
 
 .mainInfo {
@@ -116,26 +101,90 @@ nav a:active {
 .update-delete {
   display: flex;
   align-items: center;
+  gap: 25px;
+  min-width: 205px;
 }
-.update-delete a,
+
+.update-delete .update,
 .update-delete button {
   transition: 0.5s;
   background-color: #2e112dec;
   text-decoration: none;
   border: none;
   cursor: pointer;
+  margin-right: 3px;
   font-size: 1.1rem;
-  margin-right: 25px;
   padding: 9px 6px;
   color: #c9283e;
   border-radius: 9px;
-  box-shadow: 3px 3px 2px 0 red;
+  box-shadow: 3px 3px 2px 0 #c9283e;
 }
 
 .update-delete a:hover,
 .update-delete button:hover {
+  transform: translate(3px, 3px);
+  color: #f0433a;
   background-color: #2e112d;
-  color: red;
   box-shadow: none;
-  transition: 0.8s;
+  transition: 0.5s;
+}
+.username {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.usercaption {
+  font-size: 1.2rem;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
+.images {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.images button {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  position: relative;
+}
+
+.images button a {
+  color: #2e112d;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 9px 20px;
+  border: 3px solid #2e112d;
+  background: linear-gradient(-35deg, #f0433ac1 10%, #2e112d68 90%);
+  font-weight: 500;
+  border-radius: 9px;
+  transition: 0.5s;
+}
+
+.images button::after {
+  font-family: 'Font Awesome\ 5 Free';
+  content: '\f101';
+  font-weight: 900;
+  font-size: 1.1rem;
+  position: absolute;
+  transform: translate(0, 4px);
+  opacity: 0;
+  transition: 0.25s;
+}
+.images button a:hover {
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 28px;
+  font-weight: 500;
+  box-shadow: none;
+  transition: 0.4s;
+}
+.images button:hover::after {
+  transform: translate(-25px, 4px);
+  color: #2e112d;
+  opacity: 1;
+  transition: 0.5s;
 }
