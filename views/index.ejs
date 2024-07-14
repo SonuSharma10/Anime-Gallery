@@ -30,6 +30,7 @@
     </nav>
 
     <% for(post of posts) { %>
+      <div class="parent">
     <div class="gallery">
       <div class="mainInfo">
         <div class="usercaption">
@@ -50,13 +51,14 @@
     <div class="images">
       <% for( let index = 0; index < 2;index ++) { %> <% if (post.image[index]=="") { %> <% index --
       %> <% } %>
-      <img src="<%=post.image[index]%>" alt="" />
+      <img src="<%=post.image[index]%>" alt="" class="animeImg"/>
       <% } %>
       <button>
         <a href="http://localhost:8080/posts/<%=post.id%>"
           >SEE ALL <%=post.image.length%> IMAGES</a></button>
     </div>
   </div>
+</div>
 
     <% } %>
   </body>
