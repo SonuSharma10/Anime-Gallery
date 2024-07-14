@@ -200,3 +200,32 @@ nav a:active {
   opacity: 1;
   transition: 0.5s;
 }
+
+@media screen and (width <= 1255px) {
+  .images {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  img {
+    max-height: 280px;
+  }
+}
+@media screen and (width <= 1045px) {
+  .images {
+    flex-direction: column;
+  }
+}
+
+@media screen and (width <= 630px) {
+  .animeImg {
+    width: 80vw;
+    height: auto;
+  }
+  .mainInfo {
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
