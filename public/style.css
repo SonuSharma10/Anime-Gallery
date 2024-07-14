@@ -86,10 +86,7 @@ nav a:active {
 
 /* index.ejs Section */
 .parent {
-  /* border-top: 4px solid #540032;
-  border-bottom: 4px solid #540032; */
   background: linear-gradient(180deg, #990606, #561468);
-
   margin: 15px;
   margin-bottom: 30px;
 }
