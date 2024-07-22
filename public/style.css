@@ -109,7 +109,7 @@ nav a:active {
   display: flex;
   align-items: center;
   gap: 25px;
-  min-width: 205px;
+  /* min-width: 205px; */
 }
 
 .update-delete .update,
@@ -216,9 +216,46 @@ nav a:active {
   .images {
     flex-direction: column;
   }
+
+  .username {
+    font-size: 1.4rem;
+  }
+
+  .caption {
+    font-size: 1.1rem;
+  }
 }
 
 @media screen and (width <= 630px) {
+  .galleryTitle {
+    font-size: 1.5rem;
+  }
+
+  .update-delete {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .update-delete .update,
+  .update-delete button {
+    padding: 5px 3px;
+    font-size: 1rem;
+    box-shadow: 2px 2px 1px 0 #c9283e;
+  }
+  .update-delete a:hover,
+  .update-delete button:hover {
+    transform: translate(2px, 2px);
+  }
+
+  .username {
+    font-size: 1.3rem;
+  }
+
+  .caption {
+    font-size: 1rem;
+  }
+
   .animeImg {
     width: 80vw;
     height: auto;
@@ -228,5 +265,22 @@ nav a:active {
 
     align-items: center;
     flex-wrap: wrap;
+  }
+}
+
+@media screen and (width <= 480px) {
+  .galleryTitle {
+    font-size: 1.3rem;
+  }
+  nav .links {
+    flex-direction: column;
+    gap: 0;
+    margin-right: 20px;
+    padding: 0;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 5px;
   }
 }
