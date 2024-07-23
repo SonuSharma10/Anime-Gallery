@@ -7,7 +7,7 @@ this wepsite is fully developed by using <code>HTML,CSS,JS REST APIS, ExpressJS,
 
 ## IMPORTENT:
 ### currently the project is ONGOING and I Will update the progress time to time ❤️❤️❤️❤️❤️❤️
-### for installing do <code>FORK</code> or <code>GIT CLONE</code> and after that paste this commad inside ./Anime-Gallery<br>
+### for installing do <code>FORK</code> or <code>GIT CLONE</code> and after that paste this commad inside C:/.[PATH]./Anime-Gallery<br>
 ```bash 
 npm install
 ```
