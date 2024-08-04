@@ -149,20 +149,25 @@ nav a:active {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 .animeImg {
   background: linear-gradient(40deg, #f0433a 20%, #2e112dc8 50%);
   padding: 6px;
   border-radius: 20px;
 }
-.images button {
+
+.seeAll {
   border: none;
   background: transparent;
   box-shadow: none;
   position: relative;
+  margin-top: 15px;
+  margin-left: 82%;
+  margin-bottom: 15px;
 }
 
-.images button a {
+.seeAll a {
   color: #2e112d;
   text-decoration: none;
   border: none;
@@ -176,7 +181,7 @@ nav a:active {
   transition: 0.5s;
 }
 
-.images button::after {
+.seeAll::after {
   font-family: 'Font Awesome\ 5 Free';
   content: '\f101';
   font-weight: 900;
@@ -186,7 +191,7 @@ nav a:active {
   opacity: 0;
   transition: 0.25s;
 }
-.images button a:hover {
+.seeAll a:hover {
   align-items: center;
   padding-left: 8px;
   padding-right: 32px;
@@ -194,7 +199,7 @@ nav a:active {
   box-shadow: none;
   transition: 0.4s;
 }
-.images button:hover::after {
+.seeAll:hover::after {
   transform: translate(-30px, 3px);
   color: #2e112d;
   opacity: 1;
@@ -210,6 +215,17 @@ nav a:active {
 
   img {
     max-height: 280px;
+  }
+
+  .seeAll {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    position: relative;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
   }
 }
 
