@@ -212,6 +212,7 @@ nav a:active {
     max-height: 280px;
   }
 }
+
 @media screen and (width <= 1045px) {
   .images {
     flex-direction: column;
