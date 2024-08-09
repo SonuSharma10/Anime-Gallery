@@ -99,7 +99,6 @@ app.patch('/posts/update/:id', (req, res) => {
   selectedPost.thaught = thaught;
   newImage = image.filter((img) => img !== '');
   selectedPost.image = newImage;
-  // console.log(posts);
   res.redirect(`/posts/${Uid}`);
 });
 
@@ -108,7 +107,6 @@ app.delete('/posts/:id', (req, res) => {
   Uid = req.params.id;
   posts = posts.filter((post) => post.id !== Uid);
   res.redirect(`/posts`);
-  // console.log(posts);
 });
 
 app.listen(path, () => {
