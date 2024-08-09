@@ -40,7 +40,14 @@
       <form action="/posts" method="post">
         <div class="input_username">
           <label for="username" class="username">Username</label>
-          <input type="text" name="username" placeholder="@Username" id="username" size="50"
+          <input
+            type="text"
+            name="username"
+            placeholder="@Username"
+            id="username"
+            size="50"
+            required
+          />
         </div>
         <div class="input_caption">
           <label for="thaughts" class="caption">Caption for Your Gallery</label>
@@ -53,9 +60,12 @@
           ></textarea>
         </div>
         <div class="input_img">
-          <label for="image">Anime Image/s :</label>
-          <input type="url" name="image" id="image" size="90" />
-          <a id="addButton">Add Image Input</a>
+          <div class="AnimeUrl">
+            <label for="image" class="label">Anime Image/s</label>
+            <a id="addButton"><i class="fa-solid fa-square-plus"></i></a>
+          </div>
+          <input type="url" name="image" id="image" size="90" placeholder="🔗 Image Url" required />
+
           <div class="add_img"></div>
         </div>
         <br />

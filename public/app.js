@@ -10,6 +10,7 @@ addButton.addEventListener('click', function addImageInput() {
   imageInput.name = 'image';
   imageInput.id = 'image';
   imageInput.size = '90';
+  imageInput.placeholder = `🔗 Image Url`;
   const br = document.createElement('br');
   addImgDiv.appendChild(imageInput);
   addImgDiv.appendChild(br);

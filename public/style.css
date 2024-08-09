@@ -65,6 +65,7 @@ nav .links {
 }
 
 nav a {
+  font-family: 'Platypi', serif;
   text-decoration: none;
   color: #c9283e;
   font-size: 1.1rem;
@@ -162,7 +163,7 @@ nav a:active {
   background: transparent;
   box-shadow: none;
   position: relative;
-  margin-top: 15px;
+  margin-top: 20px;
   margin-left: 0%;
   /* transform: translate(-50%, 0); */
   margin-bottom: 15px;
@@ -192,7 +193,7 @@ nav a:active {
   opacity: 0;
   transition: 0.25s;
 }
-.seeAll a:hover {
+.seeAll:hover a {
   align-items: center;
   padding-left: 8px;
   padding-right: 32px;

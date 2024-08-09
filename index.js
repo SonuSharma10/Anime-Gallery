@@ -66,12 +66,12 @@ app.post('/posts', (req, res) => {
   let img = [];
   let { username, thaught, image } = req.body;
   id = uuidv4();
-  console.log(id);
+  // console.log(id);
   //NOTE { username,thaught} === {username:username, thaught:thaught}
   if (image.constructor != Array) {
     img.push(image);
   } else {
-    img = image;
+    img = image.filter((img) => img !== '');
   }
   posts.push({ id, username, thaught, image: img });
   // console.log(posts);
