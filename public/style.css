@@ -163,7 +163,8 @@ nav a:active {
   box-shadow: none;
   position: relative;
   margin-top: 15px;
-  margin-left: 82%;
+  margin-left: 0%;
+  /* transform: translate(-50%, 0); */
   margin-bottom: 15px;
 }
 
@@ -222,10 +223,10 @@ nav a:active {
     background: transparent;
     box-shadow: none;
     position: relative;
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 20px;
     margin-bottom: 15px;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
   }
 }
 

@@ -1,0 +1,46 @@
+* {
+  font-family: 'Platypi', serif;
+  font-weight: 600;
+}
+
+.addPost {
+  background-color: aqua;
+  width: 60%;
+  margin: auto;
+  padding: 40px;
+}
+
+.input_username {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-size: 1.2rem;
+  font-style: normal;
+  line-height: 0.8;
+}
+#username {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 4px solid black;
+  font-size: 15px;
+}
+.input_caption {
+  display: flex;
+  flex-direction: column;
+}
+.caption {
+  font-size: 1.2rem;
+  font-style: normal;
+  line-height: 1;
+}
+
+#thaught {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 5px;
+  border: 4px solid black;
+  font-size: 15px;
+}
