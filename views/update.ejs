@@ -4,16 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/update.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap"
+      rel="stylesheet"
     />
     <title>Update Post</title>
   </head>
@@ -29,43 +35,52 @@
         <a href="#"><i class="fa-solid fa-circle-info"></i> Info</a>
       </div>
     </nav>
-    <p>Update request for UserID : <%=post.id%></p>
-    <div class="delete">
-      <form method="post" action="/posts/<%=post.id%>?_method=delete">
-        <button type="submit">Delete Post</button>
+
+    <div class="content">
+      <div class="info">
+        <p class="uID">UserID : <%=post.id%></p>
+        <div class="delete">
+          <form method="post" action="/posts/<%=post.id%>?_method=delete">
+            <button type="submit">Delete Post</button>
+          </form>
+        </div>
+      </div>
+
+      <form action="/posts/update/<%=post.id%>?_method=patch" method="post">
+        <div class="gall">
+          <h3 class="username"><span>Username : </span>@<%=post.username%></h3>
+          <div class="input_caption">
+            <label for="thaughts" class="caption">Caption of the gallery</label>
+            <textarea name="thaught" id="thaught" rows="5" cols="40" placeholder="#captions">
+<%=post.thaught%>
+</textarea
+            >
+          </div>
+          <br />
+          <% for( let index = 0; index < post.image.length; index ++) { %> <% if
+          (post.image[index]=="") { %> <% index -- %> <% } %>
+          <span class="information">
+            <label for="image" class="title">Anime Image/s :</label>
+            <img class="updated_img" src="<%=post.image[index]%>" alt="" />
+            <input type="url" name="image" id="image" value="<%=post.image[index]%>" size="100" />
+
+            <button type="button" class="remove_img"><i class="fa-solid fa-trash"></i></button>
+          </span>
+          <br />
+          <% } %>
+          <br />
+          <label for="image">Add more Image/s URL (If Available):</label>
+          <input type="url" name="image" id="image" size="90" style="display: none" />
+          <input type="url" name="image" id="image" size="90" />
+
+          <a id="addButton">Add More Image</a>
+          <div class="add_img"></div>
+          <br />
+          <br />
+        </div>
+        <button type="submit">SUBMIT</button>
       </form>
     </div>
-
-    <form action="/posts/update/<%=post.id%>?_method=patch" method="post">
-      <div class="gallery">
-        <h3 class="username">@<%=post.username%></h3>
-        <label for="thaughts">Old Caption :</label>
-        <textarea name="thaught" id="thaught" rows="5" cols="40" placeholder="#captions">
-<%=post.thaught%></textarea
-        >
-        <br />
-        <% for( let index = 0; index < post.image.length; index ++) { %> <% if
-        (post.image[index]=="") { %> <% index -- %> <% } %>
-        <span class="info">
-          <img class="updated_img" src="<%=post.image[index]%>" alt="" />
-          <label for="image">Anime Image/s :</label>
-          <input type="url" name="image" id="image" value="<%=post.image[index]%>" size="100" />
-        </span>
-        <button type="button" class="remove_img">Delete Image</button>
-        <div></div>
-        <% } %>
-        <br />
-        <label for="image">Add more Image/s URL (If Available):</label>
-        <input type="url" name="image" id="image" size="90" style="display: none" />
-        <input type="url" name="image" id="image" size="90" />
-
-        <a id="addButton">Add More Image</a>
-        <div class="add_img"></div>
-        <br />
-        <br />
-      </div>
-      <button type="submit">SUBMIT</button>
-    </form>
     <script src="/app.js"></script>
     <script>
       let btns = document.querySelectorAll('.remove_img');
