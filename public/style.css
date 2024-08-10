@@ -216,7 +216,8 @@ nav a:active {
   }
 
   img {
-    max-height: 280px;
+    width: 100%;
+    height: auto;
   }
 
   .seeAll {

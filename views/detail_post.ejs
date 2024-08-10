@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/update.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,6 +13,12 @@
       rel="stylesheet"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -24,21 +32,23 @@
         <span class="galleryTitle">ANIME GALLERY</span>
       </div>
       <div class="links">
-        <a href="http://localhost:8080/posts/new"><i class="fa-solid fa-circle-plus"></i> Create</a>
         <a href="http://localhost:8080/posts"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="http://localhost:8080/posts/update/<%=post.id%>" class="update"
+          ><i class="fa-solid fa-pen-to-square"></i> Update</a
+        >
         <a href="#"><i class="fa-solid fa-circle-info"></i> Info</a>
       </div>
     </nav>
     <div class="gallery">
-      <h3 class="username">@<%=post.username%></h3>
-      <h4 class="caption">❝<%=post.thaught%>❞</h4>
-      <% for( let index = 0; index < post.image.length; index ++) { %> <% if (post.image[index]=="")
-      { %> <% index -- %> <% } %>
-      <img src="<%=post.image[index]%>" alt="" />
-      <% } %>
+      <h3 class="username2">@<%=post.username%></h3>
+      <h4 class="caption seeAllCaption">❝<%=post.thaught%>❞</h4>
+      <div class="container">
+        <% for( let index = 0; index < post.image.length; index ++) { %>
+        <div class="seeImg">
+          <img src="<%=post.image[index]%>" alt="" />
+        </div>
+        <% } %>
+      </div>
     </div>
-    <br />
-    <br />
-    <a href="http://localhost:8080/posts">HOME</a>
   </body>
 </html>

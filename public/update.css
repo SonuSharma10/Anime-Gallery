@@ -182,3 +182,33 @@ button:active {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
+/* ----------------------------------------------------------------------------- */
+.username2 {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.seeAllCaption {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.seeImg img {
+  max-width: 600px;
+  height: auto;
+  padding: 6px;
+  background: linear-gradient(60deg, #db569f 0%, #e5f04f 40%, #08afde 100%);
+  border-radius: 16px;
+}

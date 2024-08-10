@@ -86,11 +86,10 @@
       let btns = document.querySelectorAll('.remove_img');
       for (btn of btns) {
         btn.addEventListener('click', function delImg(event) {
-          //console.dir(event.target);
-          //console.log(event.target);
-          //console.dir(event.target.previousElementSibling);
-          event.target.previousElementSibling.remove();
-          event.target.remove();
+          const spanElement = event.target.closest('span');
+          if (spanElement) {
+            spanElement.remove();
+          }
         });
       }
     </script>
