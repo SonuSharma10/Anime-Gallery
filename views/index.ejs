@@ -55,9 +55,11 @@
         </div>
       </div>
     <div class="images">
-      <% for( let index = 0; index < 3;index ++) { %> <% if (post.image[index]=="") { %> <% index --
-      %> <% } %>
-      <img src="<%=post.image[index]%>" alt="" class="animeImg"/>
+      <% for( let index = 0; index < 3;index ++) { %> 
+        <% if (post.image[index] != "" && post.image[index] != undefined) { %> 
+          <img src="<%=post.image[index]%>" alt="" class="animeImg"/> 
+          <% } %>
+      
       <% } %>
     </div>
     <button class="seeAll">
