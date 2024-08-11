@@ -113,6 +113,10 @@ app.delete('/posts/:id', (req, res) => {
   res.redirect(`/posts`);
 });
 
+app.get('/info', (req, res) => {
+  res.render('info.ejs');
+});
+
 app.get('*', (req, res) => {
   res.status(404).send('<h1>404! Page not found</h1>');
 });
