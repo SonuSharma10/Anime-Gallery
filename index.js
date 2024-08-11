@@ -62,7 +62,7 @@ app.get('/posts/new', (req, res) => {
 
 //update new post in /posts and redirect there
 app.post('/posts', (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   let img = [];
   let { username, thaught, image } = req.body;
   id = uuidv4();
@@ -80,6 +80,9 @@ app.post('/posts', (req, res) => {
 app.get('/posts/:id', (req, res) => {
   Uid = req.params.id;
   const selectedPost = posts.find((post) => post.id === Uid);
+  if (!selectedPost) {
+    res.status(404).send('<h1>404! Page not found</h1>');
+  }
   res.render('detail_post.ejs', { post: selectedPost });
 });
 
@@ -87,6 +90,9 @@ app.get('/posts/:id', (req, res) => {
 app.get('/posts/update/:id', (req, res) => {
   Uid = req.params.id;
   const selectedPost = posts.find((post) => post.id === Uid);
+  if (!selectedPost) {
+    res.status(404).send('<h1>404! Page not found</h1>');
+  }
   res.render('update.ejs', { post: selectedPost });
 });
 
@@ -107,6 +113,10 @@ app.delete('/posts/:id', (req, res) => {
   Uid = req.params.id;
   posts = posts.filter((post) => post.id !== Uid);
   res.redirect(`/posts`);
+});
+
+app.get('*', (req, res) => {
+  res.status(404).send('<h1>404! Page not found</h1>');
 });
 
 app.listen(path, () => {
