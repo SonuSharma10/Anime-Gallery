@@ -82,8 +82,7 @@ app.get('/posts/:id', (req, res) => {
   const selectedPost = posts.find((post) => post.id === Uid);
   if (!selectedPost) {
     res.status(404).send('<h1>404! Page not found</h1>');
-  }
-  res.render('detail_post.ejs', { post: selectedPost });
+  } else res.render('detail_post.ejs', { post: selectedPost });
 });
 
 //this and bellow PATCH is in link andthey are used as to update the post
@@ -92,8 +91,7 @@ app.get('/posts/update/:id', (req, res) => {
   const selectedPost = posts.find((post) => post.id === Uid);
   if (!selectedPost) {
     res.status(404).send('<h1>404! Page not found</h1>');
-  }
-  res.render('update.ejs', { post: selectedPost });
+  } else res.render('update.ejs', { post: selectedPost });
 });
 
 //redirecting and using the patch by "_method=PATCH"
