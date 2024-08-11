@@ -112,7 +112,7 @@ app.delete('/posts/:id', (req, res) => {
   posts = posts.filter((post) => post.id !== Uid);
   res.redirect(`/posts`);
 });
-
+// info page
 app.get('/info', (req, res) => {
   res.render('info.ejs');
 });
