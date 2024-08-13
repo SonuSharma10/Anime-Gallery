@@ -2,6 +2,9 @@
 
 ### My First Anime related project. A Anime Gallery for the anime fans where every user can upload their favs anime characters images.
 
+![screencapture-localhost-8080-posts-2024-08-13-21_03_27](https://github.com/user-attachments/assets/9d92eb78-5b1a-4b6f-83cf-61ac76114a0e)
+
+
 ## Features:
 this wepsite is fully developed by using <code>HTML,CSS,JS REST APIS, ExpressJS, EJS</code>
 
