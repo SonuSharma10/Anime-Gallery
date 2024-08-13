@@ -123,4 +123,5 @@ app.get('*', (req, res) => {
 
 app.listen(path, () => {
   console.log('listning on port', path);
+  console.log('follow --> http://localhost:8080');
 });
