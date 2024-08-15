@@ -42,14 +42,14 @@ Or run with Node.js
 node index.js
 ```
 
-### Contributing 🤝
+## Contributing 🤝
 Contributions are welcome! Whether it's a new feature, bug fix, or any other improvement, feel free to make a pull request.
 
-### Project landing page 📸
+## Project landing page 📸
 ![the project landing page](https://github.com/user-attachments/assets/9d92eb78-5b1a-4b6f-83cf-61ac76114a0e)
 
 
-### Project demo video 🎥
+## Project demo video 🎥
 
 https://github.com/user-attachments/assets/99847809-088a-4d77-945e-75693a23412c
 
