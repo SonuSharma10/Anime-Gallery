@@ -18,23 +18,26 @@ Welcome to the **Anime Gallery**, a platform dedicated to all anime enthusiasts 
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/YourUsername/anime-gallery.git
+git clone https://github.com/SonuSharma10/Anime-Gallery.git
 ```
 Navigate to the project directory
 ```bash
 cd Anime-Gallery
 ```
-if you are getting error then check ls and see <code>Anime-Gallery</code> is there or not, if not there then navigate to the location where it is
+If you encounter an error, use <code> ls </code> to check if the Anime-Gallery directory is present. <br>
+If not, navigate to the location where it exists.
 
-Installing packages
+Installing node packages
 ```bash 
 npm install
 ```
-run
+
+### Execution
+run with nodemon
 ```bash
 npm run dev
 ```
-or 
+Or run with Node.js
 ```bash
 node index.js
 ```
@@ -42,21 +45,11 @@ node index.js
 ### Contributing 🤝
 Contributions are welcome! Whether it's a new feature, bug fix, or any other improvement, feel free to make a pull request.
 
-Fork the repository.
-Create your feature branch: git checkout -b feature/YourFeature.
-Commit your changes: git commit -m 'Add Your Feature'.
-Push to the branch: git push origin feature/YourFeature.
-Open a pull request.
-Open to pull requests – Let's make Anime Gallery even better together!
-
-### the project landing page
-![screencapture-localhost-8080-posts-2024-08-13-21_03_27](https://github.com/user-attachments/assets/9d92eb78-5b1a-4b6f-83cf-61ac76114a0e)
+### Project landing page 📸
+![the project landing page](https://github.com/user-attachments/assets/9d92eb78-5b1a-4b6f-83cf-61ac76114a0e)
 
 
-### the project working video
-click to expand
-
-
+### Project demo video 🎥
 
 https://github.com/user-attachments/assets/99847809-088a-4d77-945e-75693a23412c
 
