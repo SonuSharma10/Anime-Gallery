@@ -212,3 +212,37 @@ button:active {
   background: linear-gradient(60deg, #db569f 0%, #e5f04f 40%, #08afde 100%);
   border-radius: 16px;
 }
+
+/* ----------------------------------Info Page-------------------------------------- */
+.border {
+  width: 75%;
+  margin: auto;
+  padding: 13px;
+  background: linear-gradient(155deg, #dde0c7 10%, #840f6a 40%, #a31212 70%, #000000 100%);
+}
+.note {
+  padding: 30px;
+  background-color: #b48d9d;
+}
+
+.infoH1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  margin-left: 2.5rem;
+  margin-right: 1.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.disclaimer {
+  font-size: 0.9rem;
+  margin-top: 1.2rem;
+  color: #666;
+  text-align: justify;
+  text-justify: inter-word;
+}
