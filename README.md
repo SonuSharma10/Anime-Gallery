@@ -55,6 +55,9 @@ Open to pull requests – Let's make Anime Gallery even better together!
 
 ### the project working video
 click to expand
+
+
+
 https://github.com/user-attachments/assets/99847809-088a-4d77-945e-75693a23412c
 
 
