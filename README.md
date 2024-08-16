@@ -10,11 +10,11 @@ Welcome to the **Anime Gallery**, a platform dedicated to all anime enthusiasts 
 
 ## Getting Started 🛠️
 
-### Prerequisites
+### 1️⃣ Prerequisites
 - A web browser (Chrome, Firefox, etc.)
 - Internet connection
 
-### Installation
+### 2️⃣ Installation
 Clone the repository to your local machine:
 
 ```bash
@@ -24,7 +24,7 @@ Navigate to the project directory
 ```bash
 cd Anime-Gallery
 ```
-If you encounter an error, use <code> ls </code> to check if the Anime-Gallery directory is present. <br>
+If you encounter an error, use <code> /ls </code> to check if the Anime-Gallery directory is present. <br>
 If not, navigate to the location where it exists.
 
 Installing node packages
@@ -32,7 +32,7 @@ Installing node packages
 npm install
 ```
 
-### Execution
+### 3️⃣ Execution
 run with nodemon
 ```bash
 npm run dev
@@ -45,13 +45,18 @@ node index.js
 ## Contributing 🤝
 Contributions are welcome! Whether it's a new feature, bug fix, or any other improvement, feel free to make a pull request.
 
-## Project landing page 📸
+<details>
+<summary> <h2> Project landing page 📸 </h2> </summary>
+  
 ![the project landing page](https://github.com/user-attachments/assets/9d92eb78-5b1a-4b6f-83cf-61ac76114a0e)
 
-
-## Project demo video 🎥
-
-https://github.com/user-attachments/assets/99847809-088a-4d77-945e-75693a23412c
+</details>
 
 
+<details>
+<summary> <h2> Project demo video 🎥 </h2> </summary>
+
+  https://github.com/user-attachments/assets/99847809-088a-4d77-945e-75693a23412c
+
+</details>
 
