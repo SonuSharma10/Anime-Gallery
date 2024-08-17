@@ -1,4 +1,4 @@
-# Anime Gallery 🎨
+# Anime Gallery 🎨 
 
 Welcome to the **Anime Gallery**, a platform dedicated to all anime enthusiasts who love collecting and organizing anime images. Instead of downloading images directly to your device, Anime Gallery allows you to create and maintain your own personalized gallery online. Update your collection anytime without worrying about storage limitations!
 
