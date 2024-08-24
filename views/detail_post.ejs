@@ -12,9 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap"
       rel="stylesheet"
@@ -23,7 +20,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-    <title>@<%=post.username%>`s POST</title>
+    <title>@<%= post.username %>`s POST</title>
   </head>
   <body>
     <nav>
@@ -32,21 +29,23 @@
         <span class="galleryTitle">ANIME GALLERY</span>
       </div>
       <div class="links">
-        <a href="<%=BASE_URL%>/posts"><i class="fa-solid fa-house"></i> Home</a>
-        <a href="<%=BASE_URL%>/posts/update/<%=post.id%>" class="update"
+        <a href="<%= BASE_URL %>/posts"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="<%= BASE_URL %>/posts/update/<%= post.id %>" class="update"
           ><i class="fa-solid fa-pen-to-square"></i> Update</a
         >
         <a href="#"><i class="fa-solid fa-circle-info"></i> Info</a>
       </div>
     </nav>
+
     <div class="gallery">
-      <h3 class="username2">@<%=post.username%></h3>
-      <h4 class="caption seeAllCaption">❝<%=post.thaught%>❞</h4>
+      <h3 class="username2">@<%= post.username %></h3>
+      <h4 class="caption seeAllCaption">❝<%= post.thaught %>❞</h4>
       <div class="container">
-        <% for( let index = 0; index < post.image.length; index ++) { %>
+        <% for (let index = 0; index < post.image.length; index++) { %>
         <div class="seeImg">
-          <a href="<%=post.image[index]%>">
-            <img src="<%=post.image[index]%>" alt="" />
+          <a href="<%= post.image[index] %>" download="<%= post.image[index] %>">
+            <img src="<%= post.image[index] %>" alt="" />
+          </a>
         </div>
         <% } %>
       </div>
