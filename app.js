@@ -16,7 +16,7 @@ app.use(methodOverride('_method'));
 //declaration of sample data
 posts = [
   {
-    id: uuidv4(),
+    id: '1',
     username: 'Sonu Sharma',
     thaught: 'Life is Great ❤️',
     image: [
@@ -33,7 +33,7 @@ posts = [
     ],
   },
   {
-    id: uuidv4(),
+    id: '2',
     username: 'Sahil Sharma',
     thaught: 'Working hard is one way to success',
     image: [
@@ -43,7 +43,7 @@ posts = [
     ],
   },
   {
-    id: uuidv4(),
+    id: '3',
     username: 'Mighty Raju',
     thaught: "Don't provoke indians",
     image: [
@@ -53,7 +53,7 @@ posts = [
     ],
   },
   {
-    id: uuidv4(),
+    id: '4',
     username: 'ProHunter',
     thaught: 'My favorite anime collection <3',
     image: [
