@@ -206,7 +206,7 @@ button:active {
 }
 
 .seeImg img {
-  max-width: 600px;
+  max-width: 500px;
   height: auto;
   padding: 6px;
   background: linear-gradient(60deg, #db569f 0%, #e5f04f 40%, #08afde 100%);

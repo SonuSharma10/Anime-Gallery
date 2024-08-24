@@ -23,6 +23,13 @@ posts = [
       'https://i.pinimg.com/originals/43/af/d0/43afd01dc42127c352f1fde070cc2be0.jpg',
       'https://wallpapers.com/images/high/thorough-mage-ba2zud4g6b7z9hs9.webp',
       'https://wallpapers.com/images/high/blue-boy-6klqmipm5nq8f6pu.webp',
+      'https://img.freepik.com/free-photo/realistic-brushwork-fairy-tale-fantasy-wallpaper_1409-7752.jpg?size=626&ext=jpg',
+      'https://img.freepik.com/free-photo/snowy-mountain-peak-starry-galaxy-majesty-generative-ai_188544-9650.jpg?size=626&ext=jpg',
+      'https://img.freepik.com/premium-photo/anime-painting-background_1286302-1717.jpg?size=626&ext=jpg',
+      'https://img.freepik.com/free-photo/anime-moon-landscape_23-2151645846.jpg?size=626&ext=jpg',
+      'https://img.freepik.com/free-photo/anime-moon-landscape_23-2151645924.jpg?size=626&ext=jpg',
+      'https://img.freepik.com/free-photo/yasaka-pagoda-sannen-zaka-street-kyoto-japan_335224-10.jpg?size=626&ext=jpg&ga=GA1.1.50465975.1724476644&semt=ais_hybrid',
+      'https://img.freepik.com/premium-photo/picture-planet-with-words-earth-it_644690-79282.jpg?size=626&ext=jpg&ga=GA1.1.50465975.1724476644&semt=ais_hybrid',
     ],
   },
   {
@@ -43,6 +50,16 @@ posts = [
       'https://4kwallpapers.com/images/walls/thumbs_2t/16951.jpg',
       'https://wallpapers.com/images/high/attack-on-titan-anime-levi-ackerman-yqr0chiuqow3zngf.webp',
       'https://wallpapers.com/images/high/fate-zero-3552-x-1809-1nen6plvrngyt7r8.webp',
+    ],
+  },
+  {
+    id: uuidv4(),
+    username: 'ProHunter',
+    thaught: 'My favorite anime collection <3',
+    image: [
+      'https://img.freepik.com/free-photo/anime-eyes-illustration_23-2151660535.jpg?size=626&ext=jpg&ga=GA1.1.50465975.1724476644&semt=ais_hybrid',
+      'https://img.freepik.com/premium-photo/cute-anime-boy-wallpaper_776894-111269.jpg?size=626&ext=jpg&ga=GA1.1.50465975.1724476644&semt=ais_hybrid',
+      'https://img.freepik.com/free-photo/men-women-embrace-sunset-generative-ai_188544-12581.jpg?size=626&ext=jpg&ga=GA1.1.50465975.1724476644&semt=ais_hybrid',
     ],
   },
 ];
