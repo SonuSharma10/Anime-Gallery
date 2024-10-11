@@ -13,7 +13,7 @@ Welcome to the **Anime Gallery**, a platform dedicated to all anime enthusiasts 
 ### 1️⃣ Prerequisites
 - A web browser (Chrome, Firefox, etc.)
 - Internet connection
-
+  
 ### 2️⃣ Installation
 Clone the repository to your local machine:
 
